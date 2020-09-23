@@ -6,7 +6,7 @@ WORKDIR /app
 COPY . ./
 
 ## Precache all dependencies
-RUN ["deno" , "cache", "main.ts"]
+RUN ["deno" , "cache", "server.ts"]
 
 # Added to ENTRYPOINT of base image.
-CMD ["run", "--allow-env", "--allow-net", "--allow-read","--allow-write","--allow-plugin", "--allow-unstable", "main.ts"]
+CMD ["run", "--allow-env", "--allow-net", "--allow-read","--allow-write","--allow-plugin", "--allow-unstable", "server.ts"]
