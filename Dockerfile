@@ -1,5 +1,5 @@
 
-FROM hayd/deno-docker:1.3.0
+FROM hayd/alpine-deno:1.0.0-rc2
 WORKDIR /app
 
 # These steps will be re-run upon each file change in your working directory:
